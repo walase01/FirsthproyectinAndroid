@@ -17,28 +17,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Entrada1 = findViewById(R.id.editTextNumber4);
+        Entrada1 = findViewById(R.id.editTextNumber6);
         Entrada2 = findViewById(R.id.editTextNumber5);
-        Entrada3 = findViewById(R.id.editTextNumber6);
+        Entrada3 = findViewById(R.id.editTextNumber4);
     }
 
     public void Sumar_click(View num){
-
-            Entrada3.setText(Integer.parseInt(Entrada1.toString()) + Integer.parseInt(Entrada2.toString()));
+        int valor1 = Integer.parseInt(Entrada1.getText().toString());
+        int valor2 = Integer.parseInt(Entrada2.getText().toString());
+        int resultado =  valor1 + valor2 ;
+        Entrada3.setText("La suma es igual a " + Integer.toString(resultado));
 
     }
     public void Resta_click(View num){
 
-        Entrada3.setText(Integer.parseInt(Entrada1.toString()) - Integer.parseInt(Entrada2.toString()));
+        int valor1 = Integer.parseInt(Entrada1.getText().toString());
+        int valor2 = Integer.parseInt(Entrada2.getText().toString());
+        int resultado =  valor1 - valor2 ;
+        Entrada3.setText("La resta es igual a " + Integer.toString(resultado));
 
     }
     public void Multiplicacion_click(View num){
 
-        Entrada3.setText(Integer.parseInt(Entrada1.toString()) * Integer.parseInt(Entrada2.toString()));
+        int valor1 = Integer.parseInt(Entrada1.getText().toString());
+        int valor2 = Integer.parseInt(Entrada2.getText().toString());
+        int resultado =  valor1 * valor2 ;
+        Entrada3.setText("La multiplicacion es igual a " + Integer.toString(resultado));
     }
     public void Division_click(View num){
 
-        Entrada3.setText(Integer.parseInt(Entrada1.toString()) / Integer.parseInt(Entrada2.toString()));
+        float valor1 = Integer.parseInt(Entrada1.getText().toString());
+        float valor2 = Integer.parseInt(Entrada2.getText().toString());
+        float resultado =  valor1 / valor2 ;
+        Entrada3.setText("La divicion es igual a " + resultado);
     }
     public void Limpiar_click(View num){
 
